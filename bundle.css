@@ -1,0 +1,960 @@
+@import url(https://fonts.googleapis.com/css2?family=Kanit&family=Unbounded&family=Roboto+Slab&family=Aboreto&family=Readex+Pro&display=swap);
+
+.body-first {
+  background: #5c6a72;
+}
+
+.body-login {
+  background: #f1efe8;
+  min-height: 1150px;
+}
+
+.body-main {
+  background: #f1efe9;
+  min-height: 100%;
+  margin-bottom: 400px;
+  display: flex;
+}
+
+/* form {
+    border: 2px solid #000000;
+} */
+
+div.form {
+  border: 1px none;
+  position: relative;
+  top: 300px;
+  width: 400px;
+  height: 300px;
+  margin: auto;
+}
+
+.form-container {
+  border: 1px none;
+  background: none;
+  height: 300px;
+  position: relative;
+}
+
+.login-logo {
+  color: #000000;
+  font-family: Roboto Slab;
+  cursor: default;
+  position: relative;
+  top: 40px;
+  font-size: 28px;
+  font-weight: bold;
+  text-align: center;
+  text-shadow: 1px 1px grey;
+}
+
+.login-prompts {
+  position: relative;
+  top: 50px;
+  min-width: 300px;
+  color: #708089;
+  font-size: 110%;
+  font-family: Helvetica;
+  margin: auto;
+}
+
+input[type="username"] {
+  position: absolute;
+  width: 75%;
+  height: 40px;
+  left: 11%;
+  top: 38px;
+  padding-left: 11px;
+  background: none;
+  border: 1px solid;
+  color: #5c6a72;
+  border-top-right-radius: 14px;
+  border-top-left-radius: 14px;
+  font-size: 11px;
+  box-shadow: 1px 0.2px 0px 0px;
+}
+
+input[type="password"] {
+  position: absolute;
+  width: 75%;
+  height: 38px;
+  left: 11%;
+  top: 81px;
+  padding-left: 11px;
+  background: none;
+  border: 1px solid;
+  color: #5c6a72;
+  border-bottom-right-radius: 14px;
+  border-bottom-left-radius: 14px;
+  font-size: 11px;
+  box-shadow: 1px 1px 0px 0px;
+}
+
+input[type="username"]:focus,
+input[type="password"]:focus {
+  background-color: #e1e7dd;
+  outline: 2px solid #458588;
+}
+
+.btn {
+  background: none;
+  border: 1px solid;
+  color: #000000;
+  cursor: pointer;
+  opacity: 0.9;
+  top: 143px;
+  left: 11%;
+  height: 30px;
+  width: 30px;
+  border-radius: 25px;
+  font-family: Wingdings;
+  font-size: 90%;
+  position: absolute;
+  transition: 0.35s;
+  -webkit-animation: height 0.5s;
+  box-shadow: 1px 1px 0px 0px;
+  background-color: #d65d0e;
+}
+
+.btn:hover {
+  width: 78.5px;
+}
+
+.top-nav {
+  background-color: #fefcf9;
+  font-family: Wingdings;
+  overflow: hidden;
+  border-bottom: 3px solid #000000;
+  top: 0;
+  left: 0;
+  position: fixed;
+  width: 100%;
+  height: 55px;
+  z-index: 1;
+}
+
+.top-nav .active {
+  float: left;
+  text-align: center;
+  color: black;
+  text-decoration: none;
+  font-size: 47px;
+  font-weight: bold;
+  height: 100%;
+  width: 65px;
+  background: linear-gradient(#eafb36, #eafb36);
+  background-size: 0px 100%;
+  background-repeat: no-repeat;
+  transition: 0.3s;
+}
+
+.top-nav a:hover {
+  color: black;
+  height: 55px;
+  background-size: 100% 100%;
+  transition: 0.2s;
+  border-right: 3px solid black;
+  cursor: pointer;
+}
+
+.top-nav .profile {
+  background-color: none;
+  position: absolute;
+  right: 0px;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  font-weight: 500;
+  text-decoration: none;
+  margin: 5px 12px;
+  background-color: #ffffff;
+  border: 2px solid #3c3836;
+  color: black;
+  border-radius: 2px;
+  font-family: Avenir;
+  font-size: 25px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.top-nav .profile:hover {
+  background-color: none;
+  position: absolute;
+  right: 0px;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  font-weight: 500;
+  text-decoration: none;
+  box-shadow: 3px -3px black;
+  margin: 8px 15px;
+  background-color: #f3f360;
+  border: 2px solid #3c3836;
+  color: black;
+  border-radius: 2px;
+  font-family: Avenir;
+  font-size: 25px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.top-nav .logout {
+  font-family: Apple Symbols;
+}
+
+.bottom-nav {
+  position: fixed;
+  background-color: #0a0908;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 25px;
+  overflow: hidden;
+  cursor: default;
+  z-index: 1;
+}
+
+.bottom-nav p {
+  float: right;
+  font-family: Avenir;
+  display: block;
+  position: relative;
+  color: #d8d3ba;
+  text-align: center;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-top: 1px;
+  text-decoration: none;
+  font-size: 100%;
+}
+
+.background-side-nav {
+  height: 100%;
+  width: 40px;
+  border-right: 1.5px solid;
+  position: fixed;
+  z-index: -1;
+  top: 0px;
+  left: 0px;
+  -background-color: #101111;
+  border-right: 0px solid #475258;
+  overflow-x: hidden;
+}
+
+/* SIDE NAV */
+.side-nav {
+  height: 100%;
+  /* width: 135px; */
+  position: fixed;
+  z-index: 2;
+  top: 70px;
+  left: 0px;
+  background: none;
+  overflow-x: hidden;
+}
+
+.side-nav .side-btn img {
+  width: 30px;
+  top: 7px;
+  left: -1px;
+  position: relative;
+  transition: 0.3s;
+}
+
+.side-nav .side-btn:hover img {
+  position: relative;
+  left: 30px;
+  transition: 0.2s;
+}
+
+.side-nav a {
+  text-decoration: none;
+  font-size: 30px;
+  color: white;
+  display: block;
+  font-family: Avenir;
+  text-align: center;
+  margin-top: 5px;
+  padding-top: 2.5px;
+  padding-bottom: 6px;
+  padding-left: 9.5px;
+  margin-bottom: 7px;
+  /* background: linear-gradient(#EDDBC7, #EDDBC7); */
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+  border-top: 1.8px solid black;
+  border-right: 2px solid black;
+  border-bottom: 1.2px solid black;
+  border-left: 0px solid transparent;
+  background-color: #eddbc7;
+  box-shadow: 0px 1px black;
+  width: 50px;
+  font-weight: 500;
+  transition: 0.4s;
+}
+
+/* .active-btn, */
+.side-nav a:hover {
+  box-shadow: 0px 2px black;
+  color: black;
+  background: #f2cd5c;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+  border-top: 1.8px solid black;
+  border-right: 2px solid black;
+  border-bottom: 1.2px solid black;
+  font-weight: 600;
+  transition: 0.2s;
+  background-size: 100% 100%;
+  width: 110px;
+}
+
+.btn-main:active {
+  background-color: #666;
+}
+
+/* TIME CONTAINER */
+.time-container {
+  position: fixed;
+  left: 100px;
+  font-family: Avenir;
+  top: 75px;
+  padding-top: 10px;
+  padding-bottom: 2px;
+  /* padding-left: 30px; */
+  background-color: #fff;
+  height: 127px;
+  min-width: 480px;
+  z-index: 1;
+  color: white;
+  border-radius: 3px;
+  border: 1.7px solid #475258;
+}
+
+.time-container label {
+  position: absolute;
+  left: 30px;
+  font-family: Avenir;
+  top: 0px;
+  padding-top: 10px;
+  padding-bottom: 2px;
+  color: black;
+}
+
+.time-container .timer {
+  /* position: absolute; */
+  top: 0px;
+  margin-left: 40px;
+}
+
+/* .time-card .timer {
+    position: absolute;
+    top: 95px;
+    left: 318px;
+    width: 75px;
+} */
+
+.timer {
+  position: relative;
+  display: inline-flex;
+  top: 0px;
+  left: 160px;
+  width: 90px;
+  font-weight: bold;
+  border: 1px none black;
+  border-radius: 3px;
+}
+
+/* .time-container .start-timer {
+  text-decoration: none;
+  color: black;
+  font-size: 25px;
+  width: 36px;
+  background-size: 0% 100%;
+  margin-right: 0px;
+  box-shadow: 1px 1px black; 
+  height: 36px;
+  margin-top: 80px;
+  background: none;
+  border-radius: 3px;
+  border: 2px none transparent;
+  background-color: none;
+  padding-bottom: 10px;
+  opacity: 0.6;
+  transition: 0.1s;
+} */
+
+.time-container button:hover {
+  color: #ebdbb2;
+  opacity: 1;
+  /* background-color: #282828; */
+  border: 2px solid black;
+  background-size: 100% 100%;
+  transition: 0.1s;
+  margin-right: 0px;
+  cursor: pointer;
+}
+
+.time-container button .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  font-family: Avenir;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  font-size: 15px;
+  border-radius: 3px;
+  padding: 5px 0px;
+
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+  top: 105%;
+  left: 5%;
+  margin-left: -60px;
+}
+
+.time-container button:hover .tooltiptext {
+  visibility: hidden;
+}
+
+input[type="text"] {
+  width: 320px;
+  left: 30px;
+  top: 30px;
+  border-radius: 3px;
+  background-color: #ffffff;
+  border: 1.8px solid black;
+  padding: 12px 20px;
+  margin: 8px 0;
+  position: absolute;
+  font-family: Avenir;
+  font-weight: 340;
+}
+
+input[type="text"]:focus {
+  outline: 2px none;
+}
+
+.tags-nav {
+  position: fixed;
+  left: 95px;
+  font-family: Avenir;
+  top: 160px;
+  z-index: 0;
+  border-top: 2px white;
+  background-color: #282828;
+  height: 58px;
+  width: 68%;
+  color: white;
+  border-bottom-right-radius: 5.6px;
+  border-bottom-left-radius: 5.6px;
+}
+
+.tags-nav button {
+  text-decoration: none;
+  color: #ebdbb2;
+  font-size: 30px;
+  padding-bottom: 2%;
+  width: 20%;
+  background-size: 0% 100%;
+  border-radius: 2px;
+  margin-left: 5%;
+  height: 100%;
+  background: none;
+  border: none;
+  background-color: none;
+}
+
+.tags-nav button:hover {
+  color: black;
+  background-color: none;
+  background-size: 100% 100%;
+  transition: 0.05s;
+  margin-left: 5%;
+  cursor: pointer;
+}
+
+.time-container .start-timer {
+  background: #42855b;
+  color: white;
+  position: absolute;
+  right: 8px;
+  top: 38px;
+  font-family: Avenir;
+  font-size: 20px;
+  border: 1.7px solid black;
+  border-radius: 3px;
+  width: 70px;
+  height: 45px;
+  opacity: 0.8;
+  transition: 0.2s;
+  padding-top: 0px;
+}
+
+.time-container .start-timer:hover {
+  background: #357c3c;
+  color: white;
+  position: absolute;
+  right: 8px;
+  top: 38px;
+  font-family: Avenir;
+  font-size: 20px;
+  border: 1.7px solid black;
+  border-radius: 3px;
+  box-shadow: 1px 1px black;
+  transition: 0.3s;
+  width: 70px;
+}
+
+.time-container .stop-timer {
+  background: #dc3535;
+  color: white;
+  position: absolute;
+  right: 8px;
+  top: 38px;
+  font-family: Avenir;
+  font-size: 20px;
+  border: 1.7px solid black;
+  border-radius: 3px;
+  width: 70px;
+  height: 45px;
+  opacity: 0.8;
+  transition: 0.2s;
+  padding-top: 0px;
+}
+
+.time-container .stop-timer:hover {
+  background: #cf0a0a;
+  color: white;
+  position: absolute;
+  right: 8px;
+  top: 38px;
+  font-family: Avenir;
+  font-size: 20px;
+  border: 1.7px solid black;
+  box-shadow: 1px 1px black;
+  border-radius: 3px;
+  transition: 0.3s;
+  width: 70px;
+}
+
+.timer label {
+  position: relative;
+  font-weight: bold;
+  left: 110px;
+  /* border: 1px solid black; */
+  margin-top: -5px;
+  margin: auto;
+  padding: 0px;
+  margin-left: -9px;
+}
+
+/* #hours {
+    font-size: 15px;
+    position: relative;
+    left: 10px;
+    
+}
+
+#minutes {
+    position: relative;
+    font-size: 15px;
+    left: 10px;
+}
+
+#seconds {
+    position: relative;
+    font-size: 15px;
+    left: 10px;
+}
+
+#colon {
+    position: relative;
+    font-size: 15px;
+    left: 10px;
+} */
+
+.time-log {
+  background: none;
+  width: 700px;
+  min-height: 100%;
+}
+
+.time-log .time-card {
+  position: relative;
+  left: 92px;
+  font-family: Avenir;
+  top: 240px;
+  /* padding-left: 10px; */
+  background-color: #ffffff;
+  height: 127px;
+  width: 480px;
+  color: black;
+  padding-top: 10px;
+  border-radius: 3px;
+  border: 1.7px solid #000000;
+  margin-bottom: 30px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.time-log .time-card .recorded-time {
+  position: relative;
+  display: inline-flex;
+  top: 90px;
+  left: 375px;
+  font-weight: bold;
+  border: 1px none black;
+  border-radius: 3px;
+}
+
+.time-log .time-card .time-date {
+  position: absolute;
+  left: 30px;
+  font-family: Avenir;
+  top: 0px;
+  padding-top: 10px;
+  padding-bottom: 2px;
+  color: black;
+}
+
+.time-log .time-card:hover {
+  position: relative;
+  left: 92px;
+  font-family: Avenir;
+  top: 240px;
+  /* padding-left: 10px; */
+  background-color: #609ea2;
+  height: 127px;
+  width: 480px;
+  color: black;
+  padding-top: 10px;
+  border-radius: 3px;
+  border: 1.7px solid #000000;
+  box-shadow: 2px 2px black;
+  margin: -0px -0px;
+  margin-bottom: 32px;
+  transition: 0.2s;
+}
+
+.time-log .time-card button:hover {
+    /* background-color: #357c3c; */
+}
+
+.time-log .time-divider .time-today {
+  position: relative;
+  left: 92px;
+  font-family: Avenir;
+  top: 250px;
+  background-color: none;
+  width: 484px;
+  border-top: 2px double black;
+  padding-top: 10px;
+}
+
+.time-log .time-divider .time-yesterday {
+  position: relative;
+  left: 92px;
+  font-family: Avenir;
+  top: 250px;
+  background-color: none;
+  width: 484px;
+  border-top: 2px double black;
+  padding-top: 10px;
+}
+
+.resize {
+  cursor: move; /* Indicate the element draggable */
+  position: absolute; /* Set resizer to position absolute */
+  user-select: none; /* Doesn't allow users to select the content inside */
+}
+
+.projects-category {
+  background-color: none;
+  opacity: 1;
+  height: 450px;
+  position: absolute;
+  top: 75px;
+  left: 605px;
+  width: 265px;
+  border-radius: 2px;
+  font-family: Unbounded;
+  font-size: 20px;
+}
+
+.projects-category .all-projects {
+  /* background-color: #168aad; */
+  background-color: #fff;
+  width: 265px;
+  border-radius: 3px;
+  height: 100px;
+  border: 2px solid black;
+  transition: 0.3s;
+  margin-bottom: 30px;
+  cursor: pointer;
+}
+
+.projects-category .all-projects p {
+  color: black;
+  text-align: center;
+}
+
+.projects-category .all-projects:hover {
+  background-color: #609ea2;
+  width: 265px;
+  border-radius: 3px;
+  height: 100px;
+  border: 2px solid black;
+  margin: -4px -4px;
+  margin-bottom: 34px;
+  box-shadow: 4px 4px black;
+  transition: 0.2s;
+}
+
+.projects-category .projects {
+  background-color: #eddbc7;
+  width: 265px;
+  border-radius: 3px;
+  height: 100px;
+  border: 2px solid black;
+  transition: 0.3s;
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.projects-category .projects p {
+  color: black;
+  text-align: center;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.projects-category .projects:hover {
+  background-color: #f2cd5c;
+  width: 265px;
+  border-radius: 3px;
+  height: 100px;
+  border: 2px solid black;
+  box-shadow: 4px 4px black;
+  margin: -4px -4px;
+  margin-bottom: 34px;
+  transition: 0.2s;
+}
+
+.projects-category .new-projects {
+  /* background-color: #EDDBC7; */
+  width: 265px;
+  margin: auto;
+  height: 30px;
+  border-radius: 6px;
+  border: 2px dashed black;
+  transition: 0.5s;
+  position: relative;
+}
+
+.projects-category .new-projects p {
+  color: black;
+  position: absolute;
+  margin: auto;
+  left: 8.6px;
+  top: 1.5px;
+  transition: 0s;
+}
+
+.projects-category .new-projects .new-project-hover {
+  /* New project text */
+  opacity: 0.4;
+  position: absolute;
+  margin: auto;
+  left: 25px;
+  transition: 0.1s;
+  width: 250px;
+  /* font-size: 0px; */
+  overflow: hidden;
+  /* animation: typing 3.5s steps(30, end), blink-caret .5s step-end infinite; */
+}
+
+.projects-category .new-projects:hover .new-project-hover {
+  /* New project text when hover over */
+  color: black;
+  opacity: 1;
+  position: absolute;
+  margin: auto;
+  left: 26px;
+  width: 100%;
+  font-size: 20px;
+  transition: 0.2s;
+  overflow: hidden;
+  /* animation: typing 1.5s steps(30, end), blink-caret .5s step-end infinite; */
+}
+
+@keyframes typing {
+  from {
+    width: 0px;
+  }
+  to {
+    width: 250px;
+  }
+}
+
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: orange;
+  }
+}
+
+.projects-category .new-projects:hover {
+  background-color: #f2cd5c;
+  width: 265px;
+  height: 30px;
+  margin: auto;
+  border-radius: 3px;
+  border: 2px solid black;
+  box-shadow: 2px 2px black;
+  cursor: pointer;
+  /* margin: -4px -4px; */
+  margin-bottom: 32px;
+  transition: 0.4s;
+}
+
+.link-spanner {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1;
+
+  /* edit: fixes overlap error in IE7/8, 
+       make sure you have an empty gif 
+    background-image: url('empty.gif');*/
+}
+
+.vl {
+  border-left: 2px solid black;
+  height: 100%;
+  position: fixed;
+  left: 900px;
+  margin-left: -3px;
+  top: 0;
+}
+
+.tags {
+  width: 50%;
+  display: block;
+  margin: auto;
+  position: absolute;
+  top: 90px;
+  left: 35px;
+}
+
+.tags button {
+  text-decoration: none;
+  color: black;
+  font-size: 25px;
+  width: 36px;
+  background-size: 0% 100%;
+  background: none;
+  border-radius: 3px;
+  border: 2px none transparent;
+  background-color: none;
+  opacity: 0.6;
+  transition: 0.2s;
+}
+
+.time-log button:hover {
+  color: #ebdbb2;
+  opacity: 1;
+  /* background-color: #282828; */
+  border: 2px solid black;
+  background-size: 100% 100%;
+  transition: 0.1s;
+  margin-right: 0px;
+  cursor: pointer;
+}
+
+.tags img {
+  width: 80%;
+  padding-top: 4px;
+  top: 2px;
+  margin: auto;
+  transition: 0.2s;
+}
+
+.top-nav img {
+  width: 80%;
+  padding-top: 4px;
+  top: 0px;
+  margin: auto;
+  position: relative;
+}
+
+.time-card input[type="text"] {
+  width: 280px;
+  left: 30px;
+  top: 30px;
+  border-radius: 3px;
+  background-color: #ffffff;
+  border: 1.8px solid black;
+  padding: 12px 20px;
+  margin: 8px 0;
+  position: absolute;
+  font-family: Avenir;
+  font-weight: 340;
+}
+
+.time-card .start-timer {
+  background: #f2cd5c;
+  color: black;
+  font-weight: 500;
+  position: absolute;
+  right: 8px;
+  top: 38px;
+  font-family: Avenir;
+  font-size: 20px;
+  border: 1.7px solid black;
+  border-radius: 3px;
+  width: 110px;
+  height: 45px;
+  opacity: 0.8;
+  transition: 0.2s;
+  padding-top: 0px;
+}
+
+.time-card:hover .start-timer {
+  background: #fff;
+  /* color: white; */
+  /* position: absolute;
+    right: 8px;
+    top: 38px;
+    font-family: Avenir;
+    font-size: 20px;
+    border: 1.7px solid black;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: 0.3s;
+    width: 110px; */
+}
+
+.time-card .start-timer:hover {
+  background: #357c3c;
+  color: white;
+  position: absolute;
+  right: 8px;
+  top: 38px;
+  font-family: Avenir;
+  font-size: 20px;
+  border: 1.7px solid black;
+  border-radius: 3px;
+  box-shadow: 1px 1px black;
+  cursor: pointer;
+  transition: 0.3s;
+  width: 110px;
+}

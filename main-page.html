@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="bundle.css">
+        
+
+    </head>
+
+    <body class="body-main">
+        <div class="top-nav">
+            <a class="active" href="#home">≡</a>
+            <a class="profile" href="login-page.html"><img src="images/user.png"></a>
+            <!-- <a class="logout" href="login-page.html">L</a> -->
+        </div> 
+        <div class="bottom-nav">
+            <p class="stats-2">0 activities tracked today</p>
+            <p class="filler">|</p>
+            <p class="stats-3">0 minutes tracked today</p>
+            <p class="filler">|</p>
+            <p class="stats-1">Home</p>
+        </div>
+        <div class="side-nav">
+            <a class="side-btn" href="main-page.html"><img src="images/time-fast.png"></a>
+            <a href="#" class="side-btn"><img src="images/notebook.png"></a>
+            <a href="#" class="side-btn"><img src="images/stats.png"></a>
+            <a href="#" class="side-btn"><img src="images/users-alt.png"></a>
+            <a href="#" class="side-btn"><img src="images/users-alt.png"></a>
+        </div>
+        <div class="background-side-nav">
+            
+        </div>
+        <div class="record-page">
+            <div class="time-container">
+                <label for="act-name">Activity tracker</label>
+                <form><input type="text" id="act-name" name="act-name" placeholder="Use # to quickly tag your activities"></form>
+                <div class="tags">
+                    <button onclick="addLog(); return false;" href="#"><img src="images/bookmark.png"><span class="tooltiptext">Add tags</span></button>
+                    <button href="#"><img src="images/users.png"><span class="tooltiptext">Add tags</span></button>
+                    <button href="#"><img src="images/dollar.png"><span class="tooltiptext">Add tags</span></button>
+                    <button href="#"><img src="images/comment-alt.png"><span class="tooltiptext">Add tags</span></button>
+                    <!-- <button href="#">[-]<span class="tooltiptext">Add tags</span></button>
+                    <button href="#">[-]<span class="tooltiptext">Add tags</span></button> -->
+                    <button href="#"><img src="images/menu-dots.png"><span class="tooltiptext">Add tags</span></button>
+                </div>
+                <button class="start-timer" id="startStopTimer" value="startTimer">Start 
+                    <a id="startTimer" href="#">
+                        <span class="link-spanner"></span>
+                    </a>
+                </button>
+                <div class="timer">
+                    <label id="hours">00</label>
+                    <label id="colon">:</label>
+                    <label id="minutes">00</label>
+                    <label id="colon">:</label>
+                    <label id="seconds">00</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="projects-category"> 
+            <div class="all-projects">
+                <p> All reports </p>
+            </div>
+
+            <div style="background-color: #f28482;" class="projects">
+                <p> ESTF20 Gruppprojekt <br> </p>
+                <a href="https://www.google.com">
+                    <span class="link-spanner"></span>
+                </a>
+            </div>
+
+            <!-- <div class="new-projects">
+                <p> Manage projects <br> </p>
+                <a href="https://www.google.com">
+                    <span class="link-spanner"></span>
+                </a>
+            </div> -->
+
+            <div class="new-projects">
+                <p>+</p> <p class="new-project-hover">Create new project</p>
+                <a href="https://www.google.com">
+                    <span class="link-spanner"></span>
+                </a>
+            </div>
+        </div>
+
+        <div class="time-log" id="time-log">
+
+            <!-- <div class="time-divider">
+                <p class="time-today">Today</p>
+            </div> -->
+
+            <div class="time-card" id="timeCard1">
+                <form><input type="text" id="act-name" name="act-name" placeholder="Placeholder activity."></form>
+                <div class="tags">
+                    <button onclick="addLog(); return false;" href="#"><img src="images/bookmark.png"></button>
+                    <button href="#"><img src="images/users.png"></button>
+                    <button href="#"><img src="images/dollar.png"></button>
+                    <button href="#"><img src="images/comment-alt.png"></button>
+                    <button href="#"><img src="images/edit.png"></button>
+                    <button href="#"><img src="images/menu-dots.png"></button>
+                </div>
+                <button class="start-timer" id="startStopTimer" value="startTimer">Continue 
+                    <a id="startTimer" href="#">
+                        <span class="link-spanner"></span>
+                    </a>
+                </button>
+                <div class="timer">
+                    <label id="hours">00</label>
+                    <label id="colon">:</label>
+                    <label id="minutes">00</label>
+                    <label id="colon">:</label>
+                    <label id="seconds">00</label>
+                </div>
+                <div class="time-date">
+                    Wed - 15 Feb 2023
+                </div>
+            </div>
+
+            <!-- <div class="time-card">
+            </div> -->
+
+            <!-- <div class="time-divider">
+                <p class="time-yesterday">Yesterday</p>
+            </div> -->
+        
+            <!-- <div class="time-card">
+            </div> -->
+
+            <!-- <div class="time-divider">
+                <p class="time-yesterday">YYYY-MM-DD</p>
+            </div> -->
+
+            <!-- <div class="time-card">
+            </div> -->
+
+        </div>
+
+        <div class="vl"></div> 
+
+
+
+    </div>
+        <!-- <div class="tags-nav">
+            <button href="#" class="tags">[-]</button>
+            <button href="#" class="tags">[-]</button>
+            <button href="#" class="tags">[-]</button>
+        </div> -->
+        <!-- <div class="resize" id="dragMe">hi</div>
+
+        <div class="right-side-filler"></div> -->
+
+
+        <script src="bundle.js"></script>
+        <script>
+            // // var hoursLabel = document.getElementsById("hours");
+
+            // var minutesLabel = document.getElementById("minutes");
+            // var secondsLabel = document.getElementById("seconds");
+            // var totalSeconds = 0;
+            // setInterval(setTime, 1000);
+    
+            // function setTime()
+            // {
+            //     ++totalSeconds;
+            //     secondsLabel.innerHTML = pad(totalSeconds%60);
+            //     minutesLabel.innerHTML = pad(parseInt(totalSeconds/60));
+            //     hoursLabel.innerHTML = pad(parseInt(totalMinutes/60));
+            // }
+    
+            // function pad(val)
+            // {
+            //     var valString = val + "";
+            //     if(valString.length < 2)
+            //     {
+            //         return "0" + valString;
+            //     }
+            //     else
+            //     {
+            //         return valString;
+            //     }
+            // }
+        </script>
+    </body>
+</html>
